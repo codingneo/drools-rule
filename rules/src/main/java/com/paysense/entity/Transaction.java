@@ -11,4 +11,110 @@ public class Transaction implements java.io.Serializable {
     public Transaction() {
     }
 
+private String id;
+	
+	private User user;
+	private Merchant merchant;
+		
+	private double amount;
+	
+	//private Date date;
+	
+	private String dateAsString;
+	
+	private String location;
+	
+	private String ip;
+	private String deviceId;
+	
+	private TransactionStatus status;
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Merchant getMerchant() {
+		return merchant;
+	}
+
+	public void setMerchant(Merchant merchant) {
+		this.merchant = merchant;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	/*
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	*/
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public String getDeviceId() {
+		return deviceId;
+	}
+
+	public void setDeviceId(String deviceId) {
+		this.deviceId = deviceId;
+	}
+
+	public TransactionStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(TransactionStatus status) {
+		this.status = status;
+	}
+	
+	public String getDateAsString(){
+		return dateAsString;
+	}
+	
+	public void setDateAsString(String dateStr){
+		this.dateAsString = dateStr;
+	}
+
+	@Override
+	public String toString() {
+		return "Transaction [id=" + id + ", user=" + user + ", merchant=" + merchant + ", amount=" + amount 
+				+ ", dateAsString=" + dateAsString + ", location=" + location + ", ip=" + ip + ", deviceId="
+				+ deviceId + ", status=" + status + "]";
+	}
 }
