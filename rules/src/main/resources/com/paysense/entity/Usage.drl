@@ -2,7 +2,7 @@ package com.paysense.entity;
 
 rule "Extract New Transaction"
 	when
-		TranObjectContainer(newTransaction.status == TransactionStatus.INIT, $tran:newTransaction)
+		TranObjectContainer(newTransaction.status == 0, $tran:newTransaction)
 	then
 		insert($tran);
 end
