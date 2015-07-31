@@ -2,11 +2,11 @@ package com.paysense.entity;
 
 rule "Velocity Reject"
     when
-        TranObjectContainer(newTransaction.status == TransactionStatus.INIT, $tran:newTransaction, $oldTrans:oldTransactions)
+        TranObjectContainer(newTransaction.status == 0, $tran:newTransaction, $oldTrans:oldTransactions)
     then
         System.out.println( "inside Velocity Eligible rule - old transactions size: "+$oldTrans.size());
   
   		if($oldTrans.size()>2) {
-        	$tran.setStatus(0);      
+        	$tran.setStatus(3);      
         } 
 end
