@@ -3,8 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.paysense</groupId>
-  <artifactId>rules</artifactId>
-  <version>1.0.1</version>
+  <artifactId>rules-SNAPSHOT</artifactId>
+  <version>1.1.1</version>
   <name>rules</name>
   <build>
     <plugins>
