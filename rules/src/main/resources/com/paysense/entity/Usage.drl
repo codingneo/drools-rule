@@ -13,7 +13,7 @@ rule "Usage Eligible"
     then
         System.out.println( "inside Usage Eligible rule: "+$tran );
   
-        $tran.setStatus(TransactionStatus.ELIGIBLE);
+        $tran.setStatus(1);
         
 end
 
@@ -23,5 +23,5 @@ rule "Usage Review"
     then
         System.out.println( "inside Usage Review rule: "+$tran );
   
-        $tran.setStatus(TransactionStatus.REVIEW);
+        $tran.setStatus(2);
 end
