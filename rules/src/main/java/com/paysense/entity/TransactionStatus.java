@@ -10,9 +10,9 @@ public class TransactionStatus implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    static TransactionStatus INIT = new TransactionStatus("INIT");
-   static TransactionStatus INIT = new TransactionStatus("ELIGIBLE");
-   static TransactionStatus INIT = new TransactionStatus("REIVEW");
-   static TransactionStatus INIT = new TransactionStatus("REJECT");
+   static TransactionStatus ELIGIBLE = new TransactionStatus("ELIGIBLE");
+   static TransactionStatus REVIEW = new TransactionStatus("REIVEW");
+   static TransactionStatus REJECT = new TransactionStatus("REJECT");
 
    private java.lang.String name;
 
