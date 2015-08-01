@@ -11,7 +11,7 @@ public class Transaction implements java.io.Serializable {
     public Transaction() {
     }
 
-private String id;
+    private String id;
 	
 	private User user;
 	private Merchant merchant;
@@ -27,7 +27,7 @@ private String id;
 	private String ip;
 	private String deviceId;
 	
-	private int status;
+	private TransactionStatus status = TransactionStatus.INIT;
 	
 	public String getId() {
 		return id;
@@ -95,11 +95,11 @@ private String id;
 		this.deviceId = deviceId;
 	}
 
-	public int getStatus() {
+	public TransactionStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(TransactionStatus status) {
 		this.status = status;
 	}
 	
