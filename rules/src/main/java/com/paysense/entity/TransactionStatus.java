@@ -25,4 +25,9 @@ public class TransactionStatus implements java.io.Serializable
    {
       return this.name;
    }
+
+   @Override
+   public String toString() {
+	return this.name;
+   }
 }
