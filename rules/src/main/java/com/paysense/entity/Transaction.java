@@ -95,11 +95,11 @@ public class Transaction implements java.io.Serializable {
 		this.deviceId = deviceId;
 	}
 
-	public TransactionStatus getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(TransactionStatus status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 	
