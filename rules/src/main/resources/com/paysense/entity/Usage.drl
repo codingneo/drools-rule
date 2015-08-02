@@ -23,5 +23,5 @@ rule "Usage Review"
     then
         System.out.println( "inside Usage Review rule: "+$tran );
   
-        $tran.setStatus(15);
+        $tran.setStatus(16);
 end
