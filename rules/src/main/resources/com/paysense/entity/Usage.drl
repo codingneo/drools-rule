@@ -2,7 +2,7 @@ package com.paysense.entity;
 
 rule "Extract New Transaction"
 	when
-		TranObjectContainer(newTransaction.status.name == "INIT", $tran:newTransaction)
+		TranObjectContainer(newTransaction.status == 0, $tran:newTransaction)
 	then
 		insert($tran);
 end
@@ -13,15 +13,15 @@ rule "Usage Eligible"
     then
         System.out.println( "inside Usage Eligible rule: "+$tran );
   
-        $tran.setStatus(TransactionStatus.ELIGIBLE);
+        $tran.setStatus(1);
         
 end
 
 rule "Usage Review"
     when
-        $tran : Transaction( status.name == "INIT" && (user.numOfGoodTrans <= 3 || user.totalSpend <= 1000))  
+        $tran : Transaction( status == 0 && (user.numOfGoodTrans <= 3 || user.totalSpend <= 1000))  
     then
         System.out.println( "inside Usage Review rule: "+$tran );
   
-        $tran.setStatus(TransactionStatus.REVIEW);
+        $tran.setStatus(2);
 end
