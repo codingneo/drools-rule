@@ -13,8 +13,8 @@ public class Transaction implements java.io.Serializable {
 
 private String id;
 	
-	private User user;
-	private Merchant merchant;
+	private String userId;
+	private String merchantId;
 		
 	private double amount;
 	
@@ -37,20 +37,20 @@ private String id;
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public Merchant getMerchant() {
-		return merchant;
+	public String getMerchantId() {
+		return merchantId;
 	}
 
-	public void setMerchant(Merchant merchant) {
-		this.merchant = merchant;
+	public void setMerchant(String merchantId) {
+		this.merchantId = merchantId;
 	}
 
 	public double getAmount() {
@@ -113,7 +113,7 @@ private String id;
 
 	@Override
 	public String toString() {
-		return "Transaction [id=" + id + ", user=" + user + ", merchant=" + merchant + ", amount=" + amount 
+		return "Transaction [id=" + id + ", userId=" + userId + ", merchantId=" + merchantId + ", amount=" + amount 
 				+ ", dateAsString=" + dateAsString + ", location=" + location + ", ip=" + ip + ", deviceId="
 				+ deviceId + ", status=" + status + "]";
 	}
