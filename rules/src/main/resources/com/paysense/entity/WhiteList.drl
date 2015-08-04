@@ -7,27 +7,5 @@ rule "Extract New Transaction"
 		TranObjectContainer(newTransaction.status == 0, $tran:newTransaction, $user:user)
 	then
 		System.out.println( "**************testing**************: "+$user );
-		insert($tran);
-		insert($user);
-end
-
-rule "Usage Eligible"
-    when	
-	$tran : Transaction(status == 0)
-        $user : User(id==$tran.userId && numOfGoodTrans > 3 && totalSpend > 1000)
-    then
-        System.out.println( "inside Usage Eligible rule: "+$tran );
-  
-        $tran.setStatus(1);
-        
-end
-
-rule "Usage Review"
-    when
-	$tran : Transaction(status == 0)
-        $user : User(id==$tran.userId && (numOfGoodTrans <= 3 || totalSpend <= 1000))
-    then
-        System.out.println( "inside Usage Review rule: "+$tran );
-  
-        $tran.setStatus(2);
+		$tran.setStatus(1);
 end
