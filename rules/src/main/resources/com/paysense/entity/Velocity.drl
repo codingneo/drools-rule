@@ -1,12 +1,13 @@
 package com.paysense.entity;
 
-rule "Velocity Reject"
+import java.util.List;
+
+rule "Velocity Eligible"
     when
         TranObjectContainer(newTransaction.status == 0, $tran:newTransaction, $oldTrans:oldTransactions)
+        $goodTrans: List(size>5) from collect (Transaction(status == 1) from $oldTrans) 
     then
-        System.out.println( "inside Velocity Eligible rule - old transactions size: "+$oldTrans.size());
-  
-  	if($oldTrans.size()>2) {
-        	$tran.setStatus(3);      
-        } 
+        System.out.println( "inside Velocity Eligible rule - old transactions size: "+$goodTrans.size());
+ 
+        $tran.setStatus(1);       
 end
