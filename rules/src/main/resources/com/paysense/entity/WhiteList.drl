@@ -2,7 +2,7 @@ package com.paysense.entity;
 
 global java.util.List whiteList;
 
-rule "Extract New Transaction"
+rule "White List Rule"
 	when
 		TranObjectContainer(newTransaction.status == 0, $tran:newTransaction, $user:user)
 	then
