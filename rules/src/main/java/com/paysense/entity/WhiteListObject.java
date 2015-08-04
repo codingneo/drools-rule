@@ -36,5 +36,8 @@ public class WhiteListObject implements java.io.Serializable
       this.value = value;
    }
 
-
+	@Override
+	public String toString() {
+		return "Merchant [type=" + type + ", value=" + value + "]";
+	}
 }
