@@ -6,6 +6,6 @@ rule "White List Rule"
 		WhiteListObject((type=="CUSTOMER" && value==$user.id) || (type=="PHONE" && value==$user.phone)) from $whiteList
 	then
 		System.out.println( "**************testing**************: "+$user );
-		System.out.println( "**************whileList**************: "+ $whiteList);
+		System.out.println( "**************whiteList**************: "+ $whiteList);
 		$tran.setStatus(1);
 end
