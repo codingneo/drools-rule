@@ -15,7 +15,7 @@ public class User implements java.io.Serializable
 
    private double totalSpend;
 
-   private int numOfGoodTrans;
+   private double exposure;
 
    public User() {
    }
@@ -40,14 +40,14 @@ public class User implements java.io.Serializable
       this.totalSpend = totalSpend;
    }
 
-   public int getNumOfGoodTrans()
+   public double getExposure()
    {
-      return numOfGoodTrans;
+      return exposure;
    }
 
-   public void setNumOfGoodTrans(int numOfGoodTrans)
+   public void setNumOfGoodTrans(double exposure)
    {
-      this.numOfGoodTrans = numOfGoodTrans;
+      this.exposure = exposure;
    }
 
    public String getPhone()
@@ -63,7 +63,7 @@ public class User implements java.io.Serializable
    @Override
    public String toString()
    {
-      return "User [id=" + id + ", totalSpend=" + totalSpend + ", numOfGoodTrans=" + numOfGoodTrans + "]";
+      return "User [id=" + id + ", totalSpend=" + totalSpend + ", exposure =" + exposure + "]";
    }
 
 }
