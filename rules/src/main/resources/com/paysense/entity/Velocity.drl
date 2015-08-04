@@ -8,6 +8,5 @@ rule "Velocity Eligible"
         $goodTrans: List(size>5) from collect (Transaction(status == 1) from $oldTrans) 
     then
         System.out.println( "inside Velocity Eligible rule - old transactions size: "+$goodTrans.size());
- 
         $tran.setStatus(1);       
 end
