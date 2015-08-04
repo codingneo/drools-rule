@@ -15,6 +15,7 @@ public class TranObjectContainer implements java.io.Serializable {
 	private User user;
 	private Transaction newTransaction;
 	private List<Transaction> oldTransactions;
+	private List<WhiteListObject> whiteList;
 	
 	public Transaction getNewTransaction() {
 		return newTransaction;
@@ -33,5 +34,11 @@ public class TranObjectContainer implements java.io.Serializable {
 	}
 	public void setUser(User user){
 		this.user = user;
+	}
+	public List<WhiteListObject> getWhiteList(){
+		return whiteList;
+	}
+	public void setWhiteList(List<WhiteListObject> whiteList){
+		this.whiteList = whiteList;
 	}
 }
