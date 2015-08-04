@@ -12,7 +12,7 @@ public class TranObjectContainer implements java.io.Serializable {
 
     public TranObjectContainer() {
     }
-
+	private User user;
 	private Transaction newTransaction;
 	private List<Transaction> oldTransactions;
 	
@@ -27,5 +27,11 @@ public class TranObjectContainer implements java.io.Serializable {
 	}
 	public void setOldTransactions(List<Transaction> oldTransactions) {
 		this.oldTransactions = oldTransactions;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user){
+		this.user = user;
 	}
 }
