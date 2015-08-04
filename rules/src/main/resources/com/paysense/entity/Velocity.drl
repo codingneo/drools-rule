@@ -6,7 +6,7 @@ rule "Velocity Reject"
     then
         System.out.println( "inside Velocity Eligible rule - old transactions size: "+$oldTrans.size());
   
-  		if($oldTrans.size()>2) {
+  	if($oldTrans.size()>2) {
         	$tran.setStatus(3);      
         } 
 end
