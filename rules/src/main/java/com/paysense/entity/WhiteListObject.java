@@ -38,6 +38,6 @@ public class WhiteListObject implements java.io.Serializable
 
 	@Override
 	public String toString() {
-		return "Merchant [type=" + type + ", value=" + value + "]";
+		return "WhiteListObject [type=" + type + ", value=" + value + "]";
 	}
 }
