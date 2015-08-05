@@ -7,8 +7,6 @@ package com.paysense.entity;
 public class App implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
-
     public App() {
     }
-
 }
