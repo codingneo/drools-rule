@@ -24,4 +24,9 @@ public class Mobile implements java.io.Serializable
    {
       this.device_id = device_id;
    }
+
+   @Override
+   public String toString() {
+      return "Mobile [device_id=" + device_id + "]";
+   }
 }
