@@ -68,4 +68,8 @@ public class PaySenseTransaction implements java.io.Serializable
    {
       this.datetime = datetime;
    }
+   @Override
+   public String toString() {
+      return "PaySenseTransaction [merchant=" + merchant + ", app=" + app + ", mobile="   + mobile + ", transaction=" + transaction + ", datetime=" + datetime + "]";
+   }
 }
