@@ -4,11 +4,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.paysense</groupId>
   <artifactId>rules</artifactId>
-  <version>1.4.0</version>
+  <version>1.3.0</version>
   <name>rules</name>
-  <distributionManagement>
-    <downloadUrl>http://ec2-54-68-154-97.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</downloadUrl>
-  </distributionManagement>
   <build>
     <plugins>
       <plugin>
