@@ -1,4 +1,4 @@
-package com.paysense.entity;
+package com.paysense.rules;
 
 rule "White List Rule"
 	when
