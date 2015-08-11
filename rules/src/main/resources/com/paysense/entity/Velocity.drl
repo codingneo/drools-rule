@@ -1,4 +1,4 @@
-package com.paysense.entity;
+package com.paysense.rules;
 
 import java.util.List;
 import java.util.ArrayList;
