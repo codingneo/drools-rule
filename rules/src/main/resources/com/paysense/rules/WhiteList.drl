@@ -1,5 +1,9 @@
 package com.paysense.rules;
 
+import com.paysense.entity.Transactions;
+import com.paysense.entity.WhiteListObject;
+import com.paysense.entity.TranObjectContainer;
+
 rule "White List Rule"
 	when
 		TranObjectContainer(newTransaction.status == 0, $tran:newTransaction, $user:user,$whiteList:whiteList )
