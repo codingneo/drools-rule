@@ -1,6 +1,7 @@
 package com.paysense.rules;
 
 import com.paysense.entity.Transaction;
+import com.paysense.entity.WhiteListObject;
 import com.paysense.entity.TranObjectContainer;
 
 rule "White List Rule"
